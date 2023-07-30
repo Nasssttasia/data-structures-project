@@ -16,7 +16,7 @@ class Stack:
 
     def __init__(self):
         """Конструктор класса Stack"""
-        pass
+        self.top = None
 
     def push(self, data):
         """
@@ -24,7 +24,7 @@ class Stack:
 
         :param data: данные, которые будут добавлены на вершину стека
         """
-        next_node = None  # тут записываешь текущую голову
+        next_node = self.top  # тут записываешь текущую голову
         new_top = Node(data, next_node)
         self.top = new_top  # здесь в голову записываешь созданную Node
 
