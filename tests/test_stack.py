@@ -14,3 +14,6 @@ class TestMain(unittest.TestCase):
 
     def pop(self):
         self.assertEqual(self.pop(), None)
+
+    def str(self):
+        self.assertEqual(self.__str__(), 'data1')
