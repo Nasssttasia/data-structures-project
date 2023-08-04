@@ -13,7 +13,7 @@ class TestMain(unittest.TestCase):
         self.assertEqual(self.stack.push('data1'), 'data1')
 
     def pop(self):
-        self.assertEqual(self.pop(), None)
+        self.assertEqual(self.stack.pop(), None)
 
     def str(self):
         self.assertEqual(self.__str__(), 'data1')

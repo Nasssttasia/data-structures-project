@@ -19,13 +19,13 @@ class Queue:
         self.head = head
         self.tail = tail
 
-    def enqueue(self, data):
+    def enqueue(self, data, next_node=None):
         """
         Метод для добавления элемента в очередь
 
         :param data: данные, которые будут добавлены в очередь
         """
-        new_node = Node(data)
+        new_node = Node(data, next_node)
         if self.head is None:
             self.head = new_node
         else:
@@ -42,5 +42,9 @@ class Queue:
         pass
 
     def __str__(self):
-        """Магический метод для строкового представления объекта"""
-        return f"{self.head.data}\n{self.head.next_node.data}\n{self.tail.data}"
+        value = []
+        next_value = self.head
+        while next_value:
+            value.append(next_value.data)
+            next_value = next_value.next_node
+        return '\n'.join(value)
