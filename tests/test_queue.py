@@ -9,7 +9,10 @@ class TestMain(unittest.TestCase):
         self.queue = Queue()
 
     def enqueue(self):
-        self.assertEqual(self.head.enqueue('data1'), 'data1')
+        self.assertEqual(self.queue.enqueue('data1'), 'data1')
+
+    def dequeue(self):
+        self.assertEqual(self.queue.dequeue(), 'data1')
 
 
 

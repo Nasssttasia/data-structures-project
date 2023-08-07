@@ -39,7 +39,13 @@ class Queue:
 
         :return: данные удаленного элемента
         """
-        pass
+        if self.head is None:
+            return None
+        else:
+            dequeue_item = self.head
+            self.head = self.head.next_node
+        return dequeue_item.data
+
 
     def __str__(self):
         value = []
